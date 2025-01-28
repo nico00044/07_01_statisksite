@@ -1,0 +1,17 @@
+.category_list_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-inline: 7vw;
+}
+
+.category {
+  text-align: center;
+  background-color: gray;
+  padding: 2rem;
+  color: #e8ebe4;
+  text-decoration: none;
+  font-family: "Simonetta", serif;
+  font-weight: bold;
+  border-radius: 5px;
+}

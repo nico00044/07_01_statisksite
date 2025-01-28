@@ -1,0 +1,135 @@
+h2 {
+  margin-inline: 7vw;
+}
+
+header {
+  position: sticky; /*bliver i toppen og følger med*/
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  /* background-color: #bad4d4; */
+  z-index: 100;
+  font-family: "Simonetta", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  /* color: #4e878c; */
+  text-decoration: none;
+  transition: color 0.3s; /*hastighed på farveskift*/
+  font-size: 1.2rem;
+}
+
+.menu a:hover {
+  color: #e2e8dd;
+}
+
+.menu a.active {
+  color: #000022; /*Gør at der er streg - JavaScript*/
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  /*stregerne til burgermenuen*/
+  width: 100%;
+  height: 2px;
+  background-color: #000022;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+
+/*gav bedre mening med 800px*/
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .burger {
+    display: block;
+    position: absolute;
+    right: 16px;
+  }
+  nav {
+    justify-content: end;
+  }
+  header {
+    top: 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .logo2 img {
+    width: 70px;
+    height: auto;
+  }
+
+  /*roterer så den står skråt*/
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  /*streg forsvinder når man trykker - opacity 0*/
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+  /*roterer så den står skråt*/
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #bad4d4;
+    position: absolute;
+    top: 70px;
+    right: 0; /*holder til højre*/
+    width: 50%; /*størrelsen på boksen*/
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /*skygge på burgerboksen*/
+    z-index: 100;
+  }
+
+  nav.active .menu li {
+    margin: 30px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
