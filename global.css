@@ -37,14 +37,9 @@ a {
 .menu a {
   display: block;
   padding: 10px;
-  /* color: #4e878c; */
   text-decoration: none;
-  transition: color 0.3s; /*hastighed på farveskift*/
-  font-size: 1.2rem;
-}
-
-.menu a:hover {
-  color: #e2e8dd;
+  /* transition: color 0.3s; hastighed på farveskift */
+  font-size: 6rem;
 }
 
 .menu a.active {

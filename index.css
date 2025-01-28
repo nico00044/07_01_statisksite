@@ -5,6 +5,12 @@
   margin-inline: 7vw;
 }
 
+.r {
+  color: red;
+  display: inline-block;
+  transform: scale(-1, 1);
+}
+
 .category {
   text-align: center;
   background-color: gray;
