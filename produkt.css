@@ -4,8 +4,38 @@
   box-sizing: border-box;
 }
 
+/* .farve {
+  background-color: gray;
+} */
+
+.product_billede {
+  width: 400px;
+  margin-left: 3rem;
+}
+
+.knap {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 10px;
+}
+
 .r {
   color: red;
   display: inline-block;
   transform: scale(-1, 1);
+}
+
+.product_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
