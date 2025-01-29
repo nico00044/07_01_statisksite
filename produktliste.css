@@ -1,8 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .product_list_container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
-  margin-inline: 7vw;
+  grid-template-rows: subgrid;
+}
+
+.r {
+  color: red;
+  display: inline-block;
+  transform: scale(-1, 1);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .produkt {
@@ -14,4 +32,54 @@
   font-family: "Simonetta", serif;
   /* font-weight: bold; */
   border-radius: 5px;
+}
+
+.gro {
+  filter: grayscale(100%);
+}
+
+.overskrift {
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
+.navn {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.pris {
+  font-size: 1.3rem;
+}
+
+.nummer {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.read_more {
+  text-decoration: underline;
+}
+
+.rabat {
+  color: beige;
+  background-color: yellow;
+  padding: 0.5rem;
+  position: absolute;
+  top: 35%;
+}
+
+.udsolgt {
+  color: beige;
+  background-color: grey;
+  padding: 0.5rem;
+  position: absolute;
+  top: 30%;
+}
+
+.hide {
+  display: none;
 }

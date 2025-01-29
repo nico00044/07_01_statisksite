@@ -3,7 +3,7 @@ h2 {
 }
 
 header {
-  position: sticky; /*bliver i toppen og følger med*/
+  /* position: sticky; bliver i toppen og følger med */
   top: 0;
   justify-content: space-between;
   align-items: center;
