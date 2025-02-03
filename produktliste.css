@@ -37,9 +37,9 @@ img {
   grid-row: span 4;
 }
 
-.gro {
+/* .gro {
   filter: grayscale(100%);
-}
+} */
 
 .overskrift {
   font-weight: bold;
