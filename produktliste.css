@@ -8,7 +8,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
-  grid-template-rows: repeat(4, auto);
+  display: grid;
+  grid-template-rows: auto auto 1fr auto auto;
 }
 
 .r {
@@ -30,11 +31,11 @@ img {
   color: #e8ebe4;
   text-decoration: none;
   font-family: "Simonetta", serif;
-  /* font-weight: bold; */
   border-radius: 5px;
   display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 4;
+  grid-template-columns: subgrid;
+  grid-template-rows: auto auto 1fr auto auto;
+  /* grid-row: span 4; */
 }
 
 /* .gro {
@@ -66,6 +67,11 @@ img {
 
 .read_more {
   text-decoration: underline;
+  margin-top: 1rem;
+}
+
+.prisfor {
+  text-decoration: line-through;
 }
 
 .rabat {
@@ -73,7 +79,7 @@ img {
   background-color: yellow;
   padding: 0.5rem;
   position: absolute;
-  top: 35%;
+  justify-self: end;
 }
 
 .udsolgt {
@@ -81,7 +87,6 @@ img {
   background-color: grey;
   padding: 0.5rem;
   position: absolute;
-  top: 30%;
 }
 
 .hide {

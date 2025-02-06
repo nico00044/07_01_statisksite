@@ -9,8 +9,18 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${identity}`)
   .then((data) => {
     productContainer.innerHTML = `
     <div>
+    <div class="imggrid">
      <img class="product_billede" src="https://kea-alt-del.dk/t7/images/webp/640/${identity}.webp" alt="billede">
-            </div>
+    
+
+     <div class="rabat ${data.discount === null ? "hide" : ""}">
+                        <a href="produkt.html">${data.discount}%</a>
+                    </div>
+                    <div class="udsolgt ${data.soldout === 0 ? "hide" : ""}">
+                        <a href="produkt.html">Udsolgt</a>
+                    </div>
+                     </div>
+     </div>
 
 
             <div>
@@ -21,6 +31,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${identity}`)
                 <p>Grå</p>
                 <h3>Pris</h3>
                 <p>${data.price}</p>
+                 <p class="prisfor ${!data.discount && "hide"}">Før: ${Math.round((data.price / (100 - data.discount)) * 100)} kr.</p>
             </div>
 
             <div class="farve">

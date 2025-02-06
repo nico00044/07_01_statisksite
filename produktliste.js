@@ -20,11 +20,12 @@ function showProductList(data) {
                     <p class="pris">${product.category}</p>
                     <p class="pris">Price</p>
                     <p class="nummer">${product.price}</p>
+                    <p class="prisfor ${!product.discount && "hide"}">Før: ${Math.round((product.price / (100 - product.discount)) * 100)} kr.</p>
                     <p class="read_more">Read more</p>
-                    <div class="rabat hide">
-                        <a href="produkt.html">-34%</a>
+                    <div class="rabat ${product.discount === null ? "hide" : ""}">
+                        <a href="produkt.html">${product.discount}%</a>
                     </div>
-                    <div class="udsolgt hide">
+                    <div class="udsolgt ${product.soldout === 0 ? "hide" : ""}">
                         <a href="produkt.html">Udsolgt</a>
                     </div>
                 </a>

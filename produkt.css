@@ -8,9 +8,21 @@
   background-color: gray;
 } */
 
-.product_billede {
-  width: 400px;
+.imggrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   margin-left: 3rem;
+}
+
+.prisfor {
+  text-decoration: line-through;
+}
+
+.product_billede {
+  width: 100%;
+  /* margin-left: 3rem; */
+  display: block;
 }
 
 .knap {
@@ -38,4 +50,23 @@ h3 {
   gap: 1rem;
   justify-content: center;
   align-items: center;
+}
+
+.rabat {
+  color: beige;
+  background-color: yellow;
+  padding: 0.5rem;
+  position: absolute;
+  justify-self: end;
+}
+
+.udsolgt {
+  color: beige;
+  background-color: grey;
+  padding: 0.5rem;
+  position: absolute;
+}
+
+.hide {
+  display: none;
 }
